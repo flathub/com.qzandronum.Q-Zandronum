@@ -6,7 +6,7 @@
   <name>Q-Zandronum</name>
   <summary>A Zandronum 3.0 fork with improved netcode, configurable movement and many small tweaks</summary>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-proprietary</project_license>
+  <project_license>Sleepycat</project_license>
 
   <developer_name>Q-Zandronum &amp; Doomseeker team</developer_name>
   <update_contact>kreato@kreato.dev</update_contact>
