@@ -13,7 +13,7 @@
 
   <url type="homepage">https://qzandronum.com/</url>
   <url type="bugtracker">https://github.com/IgeNiaI/Q-Zandronum/issues</url>
-  <url type="help">https://github.com/IgeNiaI/Q-Zandronum/wiki</url>
+  <url type="help">https://discord.gg/u4ptaMk</url>
 
   <launchable type="desktop-id">com.qzandronum.Q-Zandronum.desktop</launchable>
 
@@ -29,19 +29,19 @@
 
   <screenshots>
     <screenshot type="default">
-      <image>https://i.imgur.com/Q5JAO5A.png</image>
+      <image>https://raw.githubusercontent.com/flathub/com.qzandronum.Q-Zandronum/master/images/image_01.png</image>
       <caption>Doom cooperative</caption>
     </screenshot>
     <screenshot>
-      <image>https://i.imgur.com/5wcfybL.png</image>	    
+      <image>https://raw.githubusercontent.com/flathub/com.qzandronum.Q-Zandronum/master/images/image_02.png</image>
       <caption>Doom cooperative</caption>
     </screenshot>
     <screenshot>
-      <image>https://i.imgur.com/zWJeoXH.png</image>
+      <image>https://raw.githubusercontent.com/flathub/com.qzandronum.Q-Zandronum/master/images/image_03.png</image>
       <caption>Doom cooperative</caption>
     </screenshot>
     <screenshot>
-      <image>https://i.imgur.com/xUYSAWD.png</image>
+      <image>https://raw.githubusercontent.com/flathub/com.qzandronum.Q-Zandronum/master/images/image_04.png</image>
       <caption>Doomseeker browser</caption>
     </screenshot>
   </screenshots>
