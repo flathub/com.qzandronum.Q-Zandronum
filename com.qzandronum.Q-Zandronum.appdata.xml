@@ -47,6 +47,11 @@
   </screenshots>
 
   <releases>
+    <release version="1.4.6" date="2023-09-20">
+      <description>
+        <p>Update Q-Zandronum to 1.4.6.</p>
+      </description>
+    </release>
     <release version="1.4.5" date="2023-09-03">
       <description>
         <p>First release of Q-Zandronum on Flathub.</p>
