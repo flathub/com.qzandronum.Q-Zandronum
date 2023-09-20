@@ -113,15 +113,15 @@ modules:
   - name: q-zandronum
     buildsystem: simple
     build-commands:
-      - tar -xf Q-Zandronum_1.4.5_Linux_amd64.tar.gz
+      - tar -xf Q-Zandronum_1.4.6_Linux_amd64.tar.gz
       - install -D q-zandronum /app/bin/q-zandronum
       - install -D q-zandronum-server /app/bin/q-zandronum-server
       - install -D q-zandronum.pk3 /app/share/games/doom/q-zandronum.pk3
       - install -D libfmodex64-4.44.64.so /app/lib/libfmodex64-4.44.64.so
     sources:
       - type: file
-        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.5/Q-Zandronum_1.4.5_Linux_amd64.tar.gz
-        sha256: c7c506be92e69be576dcfcc563c4e6fceb5a4b0280bf17948f38a2023c7ef2f4
+        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.6/Q-Zandronum_1.4.6_Linux_amd64.tar.gz
+        sha256: 9cee5752679e9960ae6dee7d5bb278889840bdd7b3f6d88a16ba8b7be1ffb00e
           #x-checker-data:
           #type: html
           #url: https://zandronum.com/download
