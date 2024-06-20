@@ -47,6 +47,17 @@
   </screenshots>
 
   <releases>
+    <release version="1.4.13" date="2024-05-20">
+      <description>
+        <p>Update Q-Zandronum to 1.4.13</p>
+        <ul>
+          <li>Made second jump only activate the moment the button is pressed, but never when button is already held.
+          <li>Added Freedoom 1.13 lumps for compatibility comparisons.
+          <li>Fixed view jittering when opening a console while zooming in or out.
+          <li>Fixed crash in CheckSolidFooting ACS function.
+        </ul>
+      </description>
+    </release>
     <release version="1.4.11" date="2023-11-30">
       <description>
         <p>Update Q-Zandronum to 1.4.11.</p>
