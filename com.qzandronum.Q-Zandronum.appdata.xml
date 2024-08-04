@@ -47,6 +47,19 @@
   </screenshots>
 
   <releases>
+    <release version="1.4.14" date="2024-07-28">
+      <description>
+        <p>Update Q-Zandronum to 1.4.14</p>
+        <ul>
+          <li>Added screen size controls binds to the menu.</li>
+          <li>bot_disablenodes is no longer saved into engine ini file because having it ON crashes when using default engine bots.</li>
+          <li>Partially fixed sprites splitting in two pieces and then improperly rotating when XY billboard is used.</li>
+          <li>Fixed getting stuck on moving "Elevator_" specials.</li>
+          <li>Fixed reloading strings after "restart" command.</li>
+          <li>Added TagActive(int tag) ACS function that tells if a given tagged sector has some thinker attached to it.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.13" date="2024-05-20">
       <description>
         <p>Update Q-Zandronum to 1.4.13</p>
