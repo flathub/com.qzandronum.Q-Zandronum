@@ -112,20 +112,21 @@ modules:
   - name: q-zandronum
     buildsystem: simple
     build-commands:
-      - tar -xf Q-Zandronum_1.4.14_Linux_amd64.tar.gz
+      - tar -xf Q-Zandronum_*_Linux_amd64.tar.gz
       - install -D q-zandronum /app/bin/q-zandronum
       - install -D q-zandronum-server /app/bin/q-zandronum-server
       - install -D q-zandronum.pk3 /app/share/games/doom/q-zandronum.pk3
       - install -D libfmodex64-4.44.64.so /app/lib/libfmodex64-4.44.64.so
     sources:
       - type: file
-        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.14/Q-Zandronum_1.4.14_Linux_amd64.tar.gz
-        sha256: 314f8a42ac7de1ae4ff7e6baeb8592b02faa7b4b79a8930e91cbc5a0d35fa5d1 
+        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.15/Q-Zandronum_1.4.15_Linux_amd64.tar.gz
+        sha256: e71f923b3e87af0ca9595a2727dce80b3eaf27d5c98d14a6c3e0106c4dff2dd5
         x-checker-data:
           type: json
           url: https://api.github.com/repos/IgeNiaI/Q-Zandronum/releases/latest
-          version-query: '.tag_name'
-          url-query: '.assets[] | select(.browser_download_url | contains("Linux_amd64.tar.gz")) | .browser_download_url'
+          version-query: .tag_name
+          url-query: .assets[] | select(.browser_download_url | contains("Linux_amd64.tar.gz"))
+            | .browser_download_url
 
   - name: launcher
     buildsystem: simple
@@ -149,7 +150,8 @@ modules:
         dest-filename: doomseeker.sh
         commands:
           # Insert clean zandronum config if none defined
-          - ls ~/.config/zandronum/zandronum.ini || /app/bin/q-zandronum -nosound -norun
+          - ls ~/.config/zandronum/zandronum.ini || /app/bin/q-zandronum -nosound
+            -norun
           # Neccessery evil to ensure that Zandronum doesn't crash because of the outdated
           # FMOD library: https://zandronum.com/forum/viewtopic.php?t=9885
           - sed -i 's|\(snd_output=\)\(.*\)|\1SDL|g' ~/.config/zandronum/zandronum.ini
