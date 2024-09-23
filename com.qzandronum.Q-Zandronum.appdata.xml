@@ -47,6 +47,53 @@
   </screenshots>
 
   <releases>
+  <release version="1.4.18" date="2024-09-17">
+      <description>
+        <p>Update Q-Zandronum to 1.4.18</p>
+        <ul>
+          <li>Fixed players not updating their position in multiplayer.</li>
+          <li>Fixed clearing dead player inventory before he drops important items like Terminator powerup.</li>
+          <li>Fixed DEHACKED sprite changes not working.</li>
+          <li>Added VelIntercept ACS function, which lets you aim actor at another actor based on his speed and your projectile speed.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.4.17" date="2024-09-05">
+      <description>
+        <p>Update Q-Zandronum to 1.4.17</p>
+        <ul>
+          <li>Fixed bots not updating their position in multiplayer.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.4.16" date="2024-09-05">
+      <description>
+        <p>Update Q-Zandronum to 1.4.16</p>
+        <ul>
+          <li>Reduced jitter when spectating some players.</li>
+          <li>Removed gl_sprite_blend option. The behavior is now as if the cvar was set to true. This is done to avoid some graphical bugs.</li>
+          <li>Fixed particles having wrong offsets.</li>
+          <li>Fixed reducing players speed when crouch button is pressed but crouching is disabled.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.4.15" date="2024-08-31">
+      <description>
+        <p>Update Q-Zandronum to 1.4.15</p>
+        <ul>
+          <li>Bouncing projectiles will now spawn decals on walls.</li>
+          <li>Default bots will no longer crash the game when bot_disablenodes is true.</li>
+          <li>Fixed black pixels instead of transparency on AMD videocards. This involved changing shaders in engine. As a result, old shader mods won't work properly anymore.</li>
+          <li>Fixed quake movement characters playing run animation when stationary.</li>
+          <li>Fixed toggle crouching not working properly in singleplayer.</li>
+          <li>Fixed quake movement friction and acceleration on floors with increased friction.</li>
+	  <li>Fixed attack z offset when crouching.</li>
+	  <li>Negative Player.AttackZOffset makes attacks spawn relative to Player.ViewHeight instead of actor center. This way you can achieve consistent attack Z when crouching.</li>
+	  <li>Added RGF_EXTRATRAIL flag for A_RailAttack. With this flag the function will spawn one extra trail actor at the end of the trail.</li>
+	  <li>Added nofilter *texture* keyword to GLDEFS. This keyword disables texture filtering for given texture. This can be used on model textures too, just make sure to provide full texture path.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.14" date="2024-07-28">
       <description>
         <p>Update Q-Zandronum to 1.4.14</p>
