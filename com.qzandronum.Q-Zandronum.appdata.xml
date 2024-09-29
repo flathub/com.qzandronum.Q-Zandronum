@@ -47,6 +47,16 @@
   </screenshots>
 
   <releases>
+  <release version="1.4.19" date="2024-09-26">
+      <description>
+        <p>Update Q-Zandronum to 1.4.19</p>
+        <ul>
+          <li>When turning off spectators vision in Team LMS, it only affects spectating dead players. True spectators can now see everyone despite the setting.</li>
+          <li>Fixed ACS AnnouncerSound function local parameter playing all sounds in offline skirmish.</li>
+          <li>FreeformMenu Command item text now dims when it's disabled.</li>
+        </ul>
+      </description>
+  </release>	  
   <release version="1.4.18" date="2024-09-17">
       <description>
         <p>Update Q-Zandronum to 1.4.18</p>
