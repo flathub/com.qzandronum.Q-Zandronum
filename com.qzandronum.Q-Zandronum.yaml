@@ -119,8 +119,8 @@ modules:
       - install -D libfmodex64-4.44.64.so /app/lib/libfmodex64-4.44.64.so
     sources:
       - type: file
-        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.18/Q-Zandronum_1.4.18_Linux_amd64.tar.gz
-        sha256: c37c5a864667f9d5556725e939a877cda9cea423b457652a785103b751d47b35
+        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.19/Q-Zandronum_1.4.19_Linux_amd64.tar.gz
+        sha256: 2a7656b319aa85a92637cd7f93dbdf342bc421861bbd8d63db2d7b5e0ac3e8d8
         x-checker-data:
           type: json
           url: https://api.github.com/repos/IgeNiaI/Q-Zandronum/releases/latest
