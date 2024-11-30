@@ -112,7 +112,7 @@ modules:
   - name: q-zandronum
     buildsystem: simple
     build-commands:
-      - tar -xf Q-Zandronum_*_Linux_amd64.tar.gz
+      - tar -xf Q-Zandronum_*_Linux_amd64.gz
       - install -D q-zandronum /app/bin/q-zandronum
       - install -D q-zandronum-server /app/bin/q-zandronum-server
       - install -D q-zandronum.pk3 /app/share/games/doom/q-zandronum.pk3
