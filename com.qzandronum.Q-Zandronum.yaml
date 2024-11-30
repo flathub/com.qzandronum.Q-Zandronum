@@ -42,8 +42,8 @@ modules:
       - -DCMAKE_INSTALL_LIBDIR=/app/lib
     sources:
       - type: archive
-        url: https://github.com/libjpeg-turbo/libjpeg-turbo/archive/refs/tags/2.1.3.tar.gz
-        sha256: dbda0c685942aa3ea908496592491e5ec8160d2cf1ec9d5fd5470e50768e7859
+        url: https://github.com/libjpeg-turbo/libjpeg-turbo/archive/refs/tags/3.0.4.tar.gz
+        sha256: 0270f9496ad6d69e743f1e7b9e3e9398f5b4d606b6a47744df4b73df50f62e38
 
   - name: fluidsynth1
     buildsystem: cmake-ninja
@@ -91,8 +91,8 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
     sources:
       - type: archive
-        url: https://bitbucket.org/Doomseeker/doomseeker/get/1.4.1.tar.bz2
-        sha256: 3983434ebea6aa5dab69d031dddd00caa062407c4e7f688ead47094fcde47dc5
+        url: https://bitbucket.org/Doomseeker/doomseeker/get/1.5.1.tar.bz2
+        sha256: eb9c0e2cd4dc1218b6712e451e76ddde963156e9cf79dd23bbd059ce3d807d81
       - type: shell
         commands:
           # Package requires HG_ details for version numbers
@@ -119,13 +119,13 @@ modules:
       - install -D libfmodex64-4.44.64.so /app/lib/libfmodex64-4.44.64.so
     sources:
       - type: file
-        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.19/Q-Zandronum_1.4.19_Linux_amd64.tar.gz
-        sha256: 2a7656b319aa85a92637cd7f93dbdf342bc421861bbd8d63db2d7b5e0ac3e8d8
+        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.20/Q-Zandronum_1.4.20_Linux_amd64.gz
+        sha256: de7e9c61a5b6d1237deb419e9fc4f33162446752a28eda6c17a236df9939530a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/IgeNiaI/Q-Zandronum/releases/latest
           version-query: .tag_name
-          url-query: .assets[] | select(.browser_download_url | contains("Linux_amd64.tar.gz"))
+          url-query: .assets[] | select(.browser_download_url | contains("Linux_amd64.gz"))
             | .browser_download_url
 
   - name: launcher
@@ -144,8 +144,8 @@ modules:
       - type: file
         path: com.qzandronum.Q-Zandronum.128.png
       - type: file
-        url: https://github.com/coelckers/gzdoom/raw/g4.8.2/soundfont/gzdoom.sf2
-        sha256: fca3e514b635a21789d4224e84865d2954a2a914d46b64aa8219ddb565c44869
+        url: https://github.com/coelckers/gzdoom/raw/g4.13.2/soundfont/gzdoom.sf2
+        sha256: a9058609b07c1f0e0c1f420e76c2e80ba78136e6173e836caab51ffb13e552f1
       - type: script
         dest-filename: doomseeker.sh
         commands:
