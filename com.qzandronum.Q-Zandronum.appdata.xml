@@ -47,6 +47,35 @@
   </screenshots>
 
   <releases>
+  <release version="1.4.20" date="2024-11-28">
+      <description>
+        <p>Update Q-Zandronum to 1.4.20</p>
+        <ul>
+          <li>Bots no longer fire their weapons in warmup state..</li>
+          <li>You can no longer switch to spectator in singleplayer campaign unless sv_cheats is ON.</li>
+          <li>Fixed user4 dash not working when jump button is pressed.</li>
+          <li>Fixed midi soundfont default path and the fallback path.</li>
+          <li>Fixed LumpOpen ACS function crash (thanks TDRR).Backported the latest SetPlayerClass ACS function code from Zandronum 3.2.</li>
+          <li>Backported the Floor_Stop() and Ceiling_Stop() ACS functions from GZDoom.</li>
+          <li>Fixed botepisode support and made it possible to create PvP campaigns with HUB levels. See below changes for details.</li>
+          <li>Botepisode campaigns (PvP botmatch) are now displayed on top of PvE campaigns in episodes list.</li>
+          <li>Leaving PvP gamemode campaign level now displays intermission.</li>
+          <li>The ACS_Execute, ACS_ExecuteAlways and Teleport_NewMap functions now support string map names. Make sure to add a minus before the map name. For example: Teleport_NewMap(-"MAP02").</li>
+          <li>Added campaignhub property to MAPINFO lump. It is supposed to be used in singleplayer botepisode campaigns to tell the deathmatch map where to go after the match has ended.</li>
+          <li>Added botsSkillOffset property to CMPGNINF lump to offset bot skills up or down per each level individually.</li>
+          <li>Added GAMEEVENT_MAP_COMPLETE event type (index 8) for EVENT scripts. This event is triggered after returning to HUB from a deathmatch match, and it's arguments provider the map name and info on whether the player won or not.</li>
+          <li>Added support for setting custom cvars in CMPGNINF lump. The syntax is cvar cvarname = value.</li>
+          <li>Added InCampaign() ACS function to tell whether the player is currently in a campaign.</li>
+          <li>The map console command will no longer start a campaign if launching a campaign map. It has to be done via the "New Game" menu.</li>
+          <li>FreeformMenu consinders singleplayer botmatch as singleplayer when using NotInSingleplayer flag.</li>
+          <li>FreeformMenu only consinders PvP gamemodes as botmatch when using NotInBotplay flag.</li>
+          <li>Fixed parsing player and bot team info in CMPGNINF lump.</li>
+          <li>Fixed Respawn map scripts not running for players that respawned after map change.</li>
+          <li>Fixed some cvars not setting correctly when set by CMPGNINF lump.</li>
+          <li>Fixed botmatch campaign status not saving correctly in saved games.</li>
+	</ul>
+      </description>
+  </release>	
   <release version="1.4.19" date="2024-09-26">
       <description>
         <p>Update Q-Zandronum to 1.4.19</p>
