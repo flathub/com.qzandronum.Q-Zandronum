@@ -108,20 +108,20 @@ modules:
   - name: q-zandronum
     buildsystem: simple
     build-commands:
-      - tar -xf Q-Zandronum_*_Linux_amd64.gz
+      - tar -xf Q-Zandronum_*_Linux_amd64.tar.gz
       - install -D q-zandronum /app/bin/q-zandronum
       - install -D q-zandronum-server /app/bin/q-zandronum-server
       - install -D q-zandronum.pk3 /app/share/games/doom/q-zandronum.pk3
       - install -D libfmodex64-4.44.64.so /app/lib/libfmodex64-4.44.64.so
     sources:
       - type: file
-        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.20/Q-Zandronum_1.4.20_Linux_amd64.gz
+        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.20/Q-Zandronum_1.4.20_Linux_amd64.tar.gz
         sha256: de7e9c61a5b6d1237deb419e9fc4f33162446752a28eda6c17a236df9939530a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/IgeNiaI/Q-Zandronum/releases/latest
           version-query: .tag_name
-          url-query: .assets[] | select(.browser_download_url | contains("Linux_amd64.gz"))
+          url-query: .assets[] | select(.browser_download_url | contains("Linux_amd64.tar.gz"))
             | .browser_download_url
 
   - name: launcher
