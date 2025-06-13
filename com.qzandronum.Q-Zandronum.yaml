@@ -1,7 +1,7 @@
 app-id: com.qzandronum.Q-Zandronum
 runtime: org.kde.Platform
 sdk: org.kde.Sdk
-runtime-version: 5.15-23.08
+runtime-version: 5.15-24.08
 command: doomseeker.sh
 
 finish-args:
@@ -62,12 +62,8 @@ modules:
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-0.6.3.tar.gz
-        sha256: 626e8a104e0dadd10ef6519a67aca880c7b40f81471659f1935b61754e12fc7b
-        x-checker-data:
-          type: anitya
-          project-id: 866
-          url-template: https://bitbucket.org/mpyne/game-music-emu/downloads/game-music-emu-$version.tar.gz
+        url: https://github.com/libgme/game-music-emu/releases/download/0.6.4/libgme-0.6.4-src.tar.gz
+        sha256: 6f94eac735d86bca998a7ce1170d007995191ef6d4388345a0dc5ffa1de0bafa
 
   - name: bzip2
     buildsystem: simple
@@ -112,20 +108,20 @@ modules:
   - name: q-zandronum
     buildsystem: simple
     build-commands:
-      - tar -xf Q-Zandronum_*_Linux_amd64.gz
+      - tar -xf Q-Zandronum_*_Linux_amd64.tar.gz
       - install -D q-zandronum /app/bin/q-zandronum
       - install -D q-zandronum-server /app/bin/q-zandronum-server
       - install -D q-zandronum.pk3 /app/share/games/doom/q-zandronum.pk3
       - install -D libfmodex64-4.44.64.so /app/lib/libfmodex64-4.44.64.so
     sources:
       - type: file
-        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.20/Q-Zandronum_1.4.20_Linux_amd64.gz
+        url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.20/Q-Zandronum_1.4.20_Linux_amd64.tar.gz
         sha256: de7e9c61a5b6d1237deb419e9fc4f33162446752a28eda6c17a236df9939530a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/IgeNiaI/Q-Zandronum/releases/latest
           version-query: .tag_name
-          url-query: .assets[] | select(.browser_download_url | contains("Linux_amd64.gz"))
+          url-query: .assets[] | select(.browser_download_url | contains("Linux_amd64.tar.gz"))
             | .browser_download_url
 
   - name: launcher
