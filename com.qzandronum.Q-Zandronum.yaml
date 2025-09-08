@@ -149,12 +149,15 @@ modules:
         dest-filename: doomseeker.sh
         commands:
           # Insert clean zandronum config if none defined
-          - ls ~/.config/zandronum/zandronum.ini || /app/bin/q-zandronum -nosound
-            -norun
+          - if [[ ! -f ~/.config/zandronum/zandronum.ini ]]; then
+          - /app/bin/q-zandronum -nosound -norun
           # Neccessery evil to ensure that Zandronum doesn't crash because of the outdated
           # FMOD library: https://zandronum.com/forum/viewtopic.php?t=9885
           - sed -i 's|\(snd_output=\)\(.*\)|\1SDL|g' ~/.config/zandronum/zandronum.ini
+          # Set the soundfont for FluidSynth and make it the default MIDI device
           - sed -i 's|\(snd_mididevice=\)\(.*\)|\1-5|g' ~/.config/zandronum/zandronum.ini
           - sed -i 's|\(fluid_patchset=\)\(.*\)|\1/app/share/sounds/sf2/gm.sf2|g' ~/.config/zandronum/zandronum.ini
+          - fi
+          - 
           - /app/bin/doomseeker
 
