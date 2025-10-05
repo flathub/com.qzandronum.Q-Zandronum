@@ -51,7 +51,7 @@ modules:
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DLIB_SUFFIX=
-      - -DCMAKE_EXE_LINKER_FLAGS=-lncurse
+      - -DCMAKE_EXE_LINKER_FLAGS=-lncurses
       - -DCMAKE_SHARED_LINKER_FLAGS=-lncurses
       - -Denable-jack=OFF
     sources:
