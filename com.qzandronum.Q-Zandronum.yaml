@@ -87,9 +87,9 @@ modules:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DQt_PACKAGE=Qt6
     sources:
-      - type: archive
-        url: https://bitbucket.org/Doomseeker/doomseeker/get/1.5.1.tar.bz2
-        sha256: eb9c0e2cd4dc1218b6712e451e76ddde963156e9cf79dd23bbd059ce3d807d81
+      - type: git
+        url: https://bitbucket.org/Doomseeker/doomseeker.git
+        commit: 766e704023aac917f829608bb0996ec977e0f84b
       - type: shell
         commands:
           # Package requires HG_ details for version numbers
