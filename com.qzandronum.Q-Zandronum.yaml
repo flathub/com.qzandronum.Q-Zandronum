@@ -115,6 +115,7 @@ modules:
       - install -D q-zandronum-server /app/bin/q-zandronum-server
       - install -D q-zandronum.pk3 /app/share/games/doom/q-zandronum.pk3
       - install -D libfmodex64-4.44.64.so /app/lib/libfmodex64-4.44.64.so
+      - install -D gm.sf2 /app/share/sounds/sf2/gm.sf2
     sources:
       - type: file
         url: https://github.com/IgeNiaI/Q-Zandronum/releases/download/1.4.20/Q-Zandronum_1.4.20_Linux_amd64.tar.gz
@@ -148,11 +149,15 @@ modules:
         dest-filename: doomseeker.sh
         commands:
           # Insert clean zandronum config if none defined
-          - ls ~/.config/zandronum/zandronum.ini || /app/bin/q-zandronum -nosound
-            -norun
+          - if [[ ! -f ~/.config/zandronum/zandronum.ini ]]; then
+          - /app/bin/q-zandronum -nosound -norun
           # Neccessery evil to ensure that Zandronum doesn't crash because of the outdated
           # FMOD library: https://zandronum.com/forum/viewtopic.php?t=9885
           - sed -i 's|\(snd_output=\)\(.*\)|\1SDL|g' ~/.config/zandronum/zandronum.ini
-          - sed -i 's|\(snd_mididevice=\)\(.*\)|\1-3|g' ~/.config/zandronum/zandronum.ini
+          # Set the soundfont for FluidSynth and make it the default MIDI device
+          - sed -i 's|\(snd_mididevice=\)\(.*\)|\1-5|g' ~/.config/zandronum/zandronum.ini
+          - sed -i 's|\(fluid_patchset=\)\(.*\)|\1/app/share/sounds/sf2/gm.sf2|g' ~/.config/zandronum/zandronum.ini
+          - fi
+          - 
           - /app/bin/doomseeker
 
