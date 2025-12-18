@@ -47,6 +47,14 @@
   </screenshots>
 
   <releases>
+  <release version="1.4.22" date="2025-12-18">
+      <description>
+        <p>Update Q-Zandronum to 1.4.22</p>
+        <ul>
+            <li>Reverted the quake explosion thrust formula when hit by other players</li>
+        </ul>
+      </description>
+  </release>
   <release version="1.4.20" date="2024-11-28">
       <description>
         <p>Update Q-Zandronum to 1.4.20</p>
