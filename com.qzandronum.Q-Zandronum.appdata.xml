@@ -55,8 +55,7 @@
         </ul>
       </description>
   </release>
-  <releases>
-    <release version="1.4.21" date="2025-12-16">
+  <release version="1.4.21" date="2025-12-16">
       <description>
         <p>Update Q-Zandronum to 1.4.21</p>
         <ul>
@@ -71,7 +70,7 @@
           <li>Fixed clientside Effect Actors spawning on clients with a delay.</li>
         </ul>
       </description>
-    </release>
+  </release>
   <release version="1.4.20" date="2024-11-28">
       <description>
         <p>Update Q-Zandronum to 1.4.20</p>
