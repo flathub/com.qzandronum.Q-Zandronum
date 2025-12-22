@@ -55,6 +55,22 @@
         </ul>
       </description>
   </release>
+  <release version="1.4.21" date="2025-12-16">
+      <description>
+        <p>Update Q-Zandronum to 1.4.21</p>
+        <ul>
+          <li>When using quake explosion thrust, the explosion knockback on players is calculated relative to their eyes, no matter who fired the projectile. Previously, it only worked when receiving knockback from own projectiles.</li>
+          <li>"callvote" command now also automatically votes "yes".</li>
+          <li>Fixed inheriting gravity from multiple 3d floors.</li>
+          <li>Fixed engine not updating sector lights correctly in some cases when moving ceiling planes.</li>
+          <li>FreeformMenu now uses float scale to better adjust to different screens. It considers both screen width and height, with 480x270 16:9 screen as a base, and scales from there.</li>
+          <li>Added CVF_SKIPOWNER and CVF_FORCESERVERSIDE flags for A_ChangeVelocity.</li>
+          <li>Implemented unlagged for MovePolyTo and PolyDoor poly types.</li>
+          <li>Fixed crash when activator is null for SetActionScript(), SetPredictableValue(), GetPredictableValue() and SetEffectActor() ACS scripts.</li>
+          <li>Fixed clientside Effect Actors spawning on clients with a delay.</li>
+        </ul>
+      </description>
+  </release>
   <release version="1.4.20" date="2024-11-28">
       <description>
         <p>Update Q-Zandronum to 1.4.20</p>

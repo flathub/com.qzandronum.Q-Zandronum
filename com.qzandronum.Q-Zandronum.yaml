@@ -156,8 +156,7 @@ modules:
           - sed -i 's|\(snd_output=\)\(.*\)|\1SDL|g' ~/.config/zandronum/zandronum.ini
           # Set the soundfont for FluidSynth and make it the default MIDI device
           - sed -i 's|\(snd_mididevice=\)\(.*\)|\1-5|g' ~/.config/zandronum/zandronum.ini
-          - sed -i 's|\(fluid_patchset=\)\(.*\)|\1/app/share/sounds/sf2/gm.sf2|g'
-            ~/.config/zandronum/zandronum.ini
+          - sed -i 's|\(fluid_patchset=\)\(.*\)|\1/app/share/sounds/sf2/gm.sf2|g' ~/.config/zandronum/zandronum.ini
           - fi
           - 
           - /app/bin/doomseeker
