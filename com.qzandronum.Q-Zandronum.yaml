@@ -32,19 +32,6 @@ modules:
 
   - shared-modules/SDL/sdl12-compat.json
 
-  # with libjpeg.so.8
-  - name: libjpeg
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_SKIP_RPATH:BOOL=YES
-      - -DENABLE_STATIC:BOOL=NO
-      - -DWITH_JPEG8:BOOL=YES
-      - -DCMAKE_INSTALL_LIBDIR=/app/lib
-    sources:
-      - type: archive
-        url: https://github.com/libjpeg-turbo/libjpeg-turbo/archive/refs/tags/3.0.4.tar.gz
-        sha256: 0270f9496ad6d69e743f1e7b9e3e9398f5b4d606b6a47744df4b73df50f62e38
-
   - name: fluidsynth1
     buildsystem: cmake-ninja
     disabled: false
